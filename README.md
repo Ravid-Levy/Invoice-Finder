@@ -1,7 +1,5 @@
 # Gmail Invoice Processing Script
 
-## Description
-
 This Google Apps Script automatically searches for Gmail messages containing specific terms (e.g., 'invoice'), retrieves these messages, and saves their attachments (excluding image files) into organized folders in Google Drive. It is particularly useful for managing invoice documents received via email.
 
 ## Features
