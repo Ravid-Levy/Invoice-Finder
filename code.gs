@@ -1,5 +1,3 @@
-// Array of search terms
-var searchTerms = ['invoice', 'חשבונית'];
 
 /**
  * Builds a search query string from a list of terms.
@@ -86,11 +84,8 @@ function getOrCreateGdriveFolder(folderPath) {
   return currentFolder;
 }
 
-function main() {
+function orginizeInvoices(searchTerms, startDate,endDate) {
   Logger.clear();
-  // Define date range outside the function
-  var startDate = '2023/01/01';
-  var endDate = '2023/11/28';
   // Build search query using the terms and date range
   var query = buildSearchQuery(searchTerms, startDate, endDate);
   var messages = findMessages(query); // Find messages that match the query
@@ -108,6 +103,14 @@ function main() {
   });
 
   Logger.log("Processing complete.");
+}
+
+function main() {
+  var searchTerms = ['invoice', 'חשבונית'];
+  // Define date range outside the function
+  var startDate = '2024/01/01';
+  var endDate = '2024/01/04';
+  orginizeInvoices(searchTerms,startDate,endDate);
 }
 
 main(); // Run the main function
